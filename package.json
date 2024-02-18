@@ -1,0 +1,20 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm run --filter @monorepo/vite-* dev",
+    "dev2": "pnpm run --filter @monorepo/vite-vue2 dev",
+    "dev3": "pnpm run --filter @monorepo/vite-vue3 dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vuepress": "pnpm run --filter @monorepo/vuepress dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": "true",
+  "dependencies": {
+    "vite": "^4.4.0"
+  }
+}

@@ -1,0 +1,36 @@
+.theme-mtd-blue {
+  --color-link: #0a70f5;
+  --color-link-hover: #2a8efe;
+  --color-link-pressed: #005ade;
+  --color-link-active: #bae2ff;
+  --color-primary: #166ff7;
+  --color-primary-1: #4d97ff;
+  --color-primary-2: #0049bf;
+  --color-primary-3: #99c4ff;
+  --color-primary-4: #f0f6ff;
+  --color-primary-5: #85c9ff;
+}
+
+$font-family: var(--font-family);
+// @name 主色
+$color-primary: #00ba73;
+// @name 主色 hover
+$color-primary-1: #3dd999;
+// @name 主色激活
+$color-primary-2: #009155;
+// @name 主色禁用
+$color-primary-3: #b3f9c8;
+$color-primary-4: #edfaf4;
+$color-primary-5: #8dd999;
+$color-primary-6:#3dd999;
+$color-primary-7: #00ba73;
+$color-primary-8: #009155;
+
+$color-link: var(--color-link);
+$color-link-hover: var(--color-link-hover);
+$color-link-pressed: var(--color-link-pressed);
+$color-link-active: var(--color-link-active);
+
+$icon-font-path: '~@ss/mtd-vue2/src/theme-chalk/fonts'; // 必须要改变字体路径
+
+@import '@ss/mtd-vue2/src/theme-chalk/index.scss';
