@@ -1,22 +1,22 @@
-import { h, render, ref } from 'vue';
+import { h, render, ref, VNode } from 'vue';
 // import { Modal } from '@ss/mtd-vue3';
 import Modall from '../components/Modal.vue';
 import { Modal as MtdModal, Button } from '@ss/mtd-vue3';
 
 export const useDialog = () => {
   let num = 1;
-  const createDialog = (component: any, id: string) => {
+  const createDialog = (component: VNode, id: string) => {
     const container = document.createElement('div', {});
     container.setAttribute('id', id);
     render(component, container);
     return container;
-  }
+  };
 
-  const openDialog = (component: any, options: any, title: string) => {
-    const id = `dialog_id_${num++}`
+  const openDialog = (component: VNode, options: VNode, title: string) => {
+    const id = `dialog_id_${num++}`;
     return new Promise((resolve, reject) => {
       try {
-        const childComponent = h(component, {...options});
+        const childComponent = h(component, { ...options });
         // 1、创建一个虚拟节点
         const vnode = h(Modall, {}, childComponent);
         // 2、将虚拟节点render为真实节点
@@ -24,12 +24,12 @@ export const useDialog = () => {
         // 3、将真实节点插入body中
         document.body.appendChild(dialogDom);
         resolve(id);
-      } catch(error) {
+      } catch (error) {
         reject(error);
       }
     });
-  }
+  };
   return {
-      openDialog
-  }
-}
+    openDialog,
+  };
+};
